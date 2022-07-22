@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Tabuleiro;
+
 
 namespace xadrez_console
 {
@@ -11,7 +8,10 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-            Tabuleiro1 tab = new Tabuleiro1(8, 8);
+            Tabuleiro.Tabuleiro tab = new Tabuleiro.Tabuleiro(8, 8);
+
+            Tela.imprimirTabuleiro(tab);
+
             Console.ReadLine();
 
             
