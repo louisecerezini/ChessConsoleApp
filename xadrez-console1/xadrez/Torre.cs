@@ -33,7 +33,7 @@ namespace xadrez
                 {
                     break;
                 }
-                pos.linha = pos.linha + 1;
+                pos.linha = pos.linha - 1;
             }
             // Abaixo 
             pos.definirValores(posicao.linha + 1, posicao.coluna);
