@@ -71,11 +71,11 @@ namespace xadrez
                         // #jogadaespecial en passant 
                         if (posicao.linha == 3)
                         {
-                            Posicao direita = new Posicao(posicao.linha, posicao.coluna - 1);
+                            Posicao direita = new Posicao(posicao.linha, posicao.coluna + 1);
                             if (tab.posicaoValida(direita) && existeInimigos(direita) && tab.peca(direita) == partida.vulneravelEnPassant)
                             {
                                 {
-                                    mat[direita.linha, direita.coluna] = true;
+                                    mat[direita.linha -1, direita.coluna] = true;
                                 }
 
 
@@ -105,17 +105,17 @@ namespace xadrez
                                 if (tab.posicaoValida(esquerda) && existeInimigos(esquerda) && tab.peca(esquerda) == partida.vulneravelEnPassant)
                                 {
                                     {
-                                        mat[esquerda.linha, esquerda.coluna] = true;
+                                        mat[esquerda.linha +1, esquerda.coluna] = true;
                                     }
 
                                     // #jogadaespecial en passant 
                                     if (posicao.linha == 3)
                                     {
-                                        direita = new Posicao(posicao.linha, posicao.coluna - 1);
+                                        direita = new Posicao(posicao.linha, posicao.coluna +1);
                                         if (tab.posicaoValida(direita) && existeInimigos(direita) && tab.peca(direita) == partida.vulneravelEnPassant)
                                         {
                                             {
-                                                mat[direita.linha, direita.coluna] = true;
+                                                mat[direita.linha +1, direita.coluna] = true;
                                             }
 
 
